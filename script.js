@@ -1,14 +1,7 @@
-
-let NumberOfSlides = 4
 let ScreenWidth = window.innerWidth
+let NumberOfSlides = document.body.scrollWidth / ScreenWidth
 let currentWidth = 0
 let maxWidth = (NumberOfSlides - 1) * ScreenWidth 
-
-window.visualViewport.addEventListener('resize', () => {
-  currentWidth = 0
-  ScreenWidth = window.innerWidth
-  maxWidth = (NumberOfSlides - 1) * ScreenWidth
-})
 
 function nextPage(){
   if(currentWidth >= maxWidth){
@@ -18,7 +11,6 @@ function nextPage(){
   }
   currentWidth = currentWidth + ScreenWidth
   window.scrollTo(currentWidth,0)
-  console.log(ScreenWidth, currentWidth)
 }
 
 function previousPage(){
@@ -29,6 +21,12 @@ function previousPage(){
   window.scrollTo(currentWidth,0)
 }
 
+window.visualViewport.addEventListener('resize', () => {
+  currentWidth = 0
+  ScreenWidth = window.innerWidth
+  maxWidth = (NumberOfSlides - 1) * ScreenWidth
+})
+
 document.addEventListener('keydown', (e) => {
   if(e.key == "ArrowRight") {
     nextPage()
@@ -36,3 +34,8 @@ document.addEventListener('keydown', (e) => {
     previousPage()
   }
 })
+
+window.addEventListener('load', () => {
+  window.scrollTo(0,0)
+})
+

@@ -251,3 +251,116 @@ body {
   word-wrap: break-word;
   white-space: normal;
 }
+
+/* SLIDE 5 */
+
+.slide-5{
+  height: 100%;
+  width: 100vw;
+  z-index: 50;
+  background: url('./img/img5.jpg') no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-5 .content .links{
+  display: flex;
+  flex-direction: column;
+}
+.slide-5 .content{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.slide-5 .content .links{
+  position: absolute;
+  display: flex;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+}
+.slide-5 .content .links h2{
+  background-color: #6a0000;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.316);
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.slide-5 .content .links > div{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  padding: 10px 15px;
+  width: 80px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.357);
+  background-color: #d00000;
+  border: 2px solid rgb(220, 130, 130);
+  border-left: 2px solid rgb(151, 84, 84);
+  border-radius: 50px;
+}
+.slide-5 .content .links > div a{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6a0000;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.289);
+  transition: all 0.3s ease;
+}
+.slide-5 .content .links > div a:hover{
+  background-color: #ae1010;
+}
+
+.slide-5 .content .links > div a .link_popup{
+  position: absolute;
+  right: -30px;
+  width: 0;
+  height: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0;
+  background-color: white;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  color: #000;
+  font-weight: 600;
+}
+.slide-5 .content .links > div a:hover .zero{
+  width: 180px;
+  right: -210px;
+  padding: 10px 15px;
+}
+.slide-5 .content .links > div a:hover .one{
+  width: 180px;
+  right: -210px;
+  padding: 10px 15px;
+}
+.slide-5 .content .links > div a:hover .two{
+  width: 145px;
+  right: -175px;
+  padding: 10px 15px;
+}
+.slide-5 .content .links > div a:hover .three{
+  width: 200px;
+  right: -230px;
+  padding: 10px 15px;
+}
+.slide-5 .content .links > div a:hover .four{
+  width: 80px;
+  right: -110px;
+  padding: 10px 15px;
+}
+.slide-5 .content h1{
+  color: #fff;
+  font-size: 2.5rem;
+}
+
